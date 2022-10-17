@@ -15,7 +15,7 @@ Steve has recently graduated with a degree in finance, and he wants to help his 
 Judging by the outcomes of these tables, if Steve were to recommend any of the stocks in this dataset to his parents ENPH and RUN would be the safest investment for them to make. 
 
 ### Refactored Code Comparison 
-The original <for> loop was structured in a way that looped over the dataset multiple times. It checks through each current ticker and loops back around once it ends and moves on to the next one:
+The original `for` loop was structured in a way that looped over the dataset multiple times. It checks through each current ticker and loops back around once it ends and moves on to the next one:
 
     'Loop through the tickers
     
@@ -66,7 +66,7 @@ The original <for> loop was structured in a way that looped over the dataset mul
     
     Next i
 
-To change this so that the data only needs to loop one time, a <tickerIndex> variable was added and used to access four other arrays in the script: <tickers>, <tickerVolume>, <tickerStartingPrices>, and <tickerEndingPrices>:
+To change this so that the data only needs to loop one time, a <tickerIndex> variable was added and used to access four other arrays in the script: `tickers`, `tickerVolume`, `tickerStartingPrices`, and `tickerEndingPrices`:
 
     '1a) Create a ticker Index
     tickerIndex = 0
@@ -76,7 +76,7 @@ To change this so that the data only needs to loop one time, a <tickerIndex> var
     Dim tickerStartingPrices(12) As Single
     Dim tickerEndingPrices(12) As Single
 
-Using <if-then> statements and the newly added arrays, a <for> loop is used to check for the first row (starting price), the last row (ending price), and to increase the ‘tickerIndex’ if the next row’s ticker doesn’t match previous one: 
+Using `if-then` statements and the newly added arrays, a `for` loop is used to check for the first row (starting price), the last row (ending price), and to increase the `tickerIndex` if the next row’s ticker doesn’t match previous one: 
 
     '2a) Create a for loop to initialize the tickerVolumes to zero.
     For i = 0 To 11
@@ -117,7 +117,7 @@ Using <if-then> statements and the newly added arrays, a <for> loop is used to c
     
     Next i
 
-Finally, a <for> loop is used to loop though the arrays and display the output in the worksheet:
+Finally, a `for` loop is used to loop though the arrays and display the output in the worksheet:
 
     '4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
     For i = 0 To 11
@@ -145,4 +145,4 @@ One of the advantages that comes with refactoring code is that it provides a pre
 
 However, the disadvantages of working with pre-existing code is the possibility of running into issues with debugging and errors. Since we’re not starting from the beginning, it can be difficult to understand where exactly the code is going wrong- If it’s something that that was added, or if the new things are just conflicting with old things in the code. This can be an even bigger issue when working with code that isn’t your own, making it hard to understand what the original code might be trying to do and how it can be fixed.
 
-When refactoring the original VBA script, I found that working with pre-existing code helped in the fact that the code provided was already working, and since I know how it was written, it gave me a good idea on what needed to change to make it run more smoothly. The problems arose when I tried to change things. There was one specific issue that kept popping up and I don’t know how it got there or how it can be fixed. Sometimes when I run the refactored code, it gives me an entirely different run time for both years than it originally did. For example, it will say “This code ran in 8.398 seconds for the year 2017” instead of the original 0.108 seconds. 
+When refactoring the original VBA script, I found that working with pre-existing code helped in the fact that the code provided was already working, and since I know how it was written, it gave me a good idea on what needed to change to make it run more smoothly. unfortunately, I still ran into issues when I tried to edit and add things to the code. There was one specific issue that kept popping up and I don’t know how it got there or how it can be fixed. Sometimes when I run the refactored code, it gives me an entirely different run time for both years than it originally did. For example, it will say “This code ran in 8.398 seconds for the year 2017” instead of the original 0.108 seconds. 
