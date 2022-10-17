@@ -66,7 +66,7 @@ The original `for` loop was structured in a way that looped over the dataset mul
     
     Next i
 
-To change this so that the data only needs to loop one time, a <tickerIndex> variable was added and used to access four other arrays in the script: `tickers`, `tickerVolume`, `tickerStartingPrices`, and `tickerEndingPrices`:
+To change this so that the data only needs to loop one time, a `tickerIndex` variable was added and used to access four other arrays in the script: `tickers`, `tickerVolume`, `tickerStartingPrices`, and `tickerEndingPrices`:
 
     '1a) Create a ticker Index
     tickerIndex = 0
